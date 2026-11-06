@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; manifest-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#05030c">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<title>Neon Siege — CinemaX Action</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="orbs" aria-hidden="true"><i></i><i></i></div>
+<main class="wrap">
+  <header class="top"><h1><span class="grad">Neon</span> Siege</h1><p class="muted">Bertahan dari serbuan neon. Tembakan otomatis — fokus menghindar!</p></header>
+  <div class="stage" id="stage">
+    <canvas id="cv" role="img" aria-label="Arena pertempuran neon. Gerakkan pesawat untuk menghindari musuh."></canvas>
+    <div class="hud">
+      <div class="hl"><span id="hHp" title="Nyawa"></span></div>
+      <div class="hc"><b id="hScore">0</b><small id="hCombo"></small></div>
+      <div class="hr"><span id="hWave" class="pill"></span>
+        <button class="ib" id="bPause" type="button" aria-label="Jeda">⏸</button>
+        <button class="ib" id="bMute" type="button" aria-label="Suara">🔊</button>
+        <button class="ib" id="bFs" type="button" aria-label="Layar penuh">⛶</button></div>
+    </div>
+    <div class="banner" id="banner"></div>
+    <div class="joy" id="joyB" hidden><i id="joyK"></i></div>
+    <button class="dashbtn" id="bDash" type="button" aria-label="Dash"><span>⚡</span><u id="dashCd"></u></button>
+    <div class="overlay" id="ov">
+      <div class="panel">
+        <h2 id="ovT"></h2><p id="ovP" class="muted"></p>
+        <button class="btn" id="btn" type="button"></button>
+        <ul class="keys muted small">
+          <li>📱 Geser jari di layar = gerak · tombol ⚡ = dash kebal sesaat</li>
+          <li>⌨️ <kbd>WASD</kbd>/<kbd>Panah</kbd> gerak · <kbd>Spasi</kbd> dash · <kbd>F</kbd> layar penuh · <kbd>P</kbd> jeda</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rotate" id="rot">📱↻ Putar HP ke mode landscape untuk pengalaman terbaik</div>
+  </div>
+</main>
+<script src="assets/js/engine.js"></script>
+<script src="assets/js/game.js"></script>
+</body>
+</html>
